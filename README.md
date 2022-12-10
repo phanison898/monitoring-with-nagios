@@ -17,6 +17,8 @@
   sudo yum install gd gd-devel
   ```
 
+---
+
 #### Step 2: Create Account Information
 
 - You need to set up a Nagios user. Run the following commands:
@@ -34,6 +36,8 @@
   sudo usermod -a -G nagcmd apache
   ```
 
+---
+
 #### Step 3: Download Nagios Core and the Plugins
 
 - Create a directory for storing the downloads.
@@ -49,6 +53,8 @@
   wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-4.4.9.tar.gz
   wget https://nagios-plugins.org/download/nagios-plugins-2.3.3.tar.gz
   ```
+
+---
 
 #### Step 4: Compile and Install Nagios
 
@@ -80,6 +86,8 @@
   sudo make install-commandmode
   ```
 
+---
+
 #### Step 5: Customize Configuration
 
 - Change E-Mail address with nagiosadmin contact definition you’d like to use for receiving Nagios alerts.
@@ -87,6 +95,8 @@
   ```bash
   sudo vim /usr/local/nagios/etc/objects/contacts.cfg
   ```
+
+---
 
 #### Step 6: Configure the Web Interface
 
@@ -102,6 +112,8 @@
   sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin       //Type the new password twice.
   sudo service httpd restart                                             //Restart Service
   ```
+
+---
 
 #### Step 7: Compile and Install the Nagios Plugins
 
@@ -120,6 +132,8 @@
   make
   sudo make install
   ```
+
+---
 
 #### Step 8: Start Nagios
 
@@ -142,9 +156,13 @@
   sudo service nagios start
   ```
 
+---
+
 #### Step 9: Update AWS Security Group
 
 - you need to open port 80 on the new AWS EC2 server to incoming traffic so you can connect to the new Nagios webpage
+
+---
 
 #### Step 10: Log in to the Web Interface
 
