@@ -1,4 +1,4 @@
-### Steps to Nagios in Amazon EC2 Linux server
+### Steps to install Nagios in Amazon EC2 Linux server
 
 #### Step 1: Install Prerequisite Software
 
