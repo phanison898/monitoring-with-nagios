@@ -12,9 +12,9 @@
 - You can use yum to install these packages by running the following commands (as ec2-user):
 
   ```bash
-  sudo yum install httpd php
-  sudo yum install gcc glibc glibc-common
-  sudo yum install gd gd-devel
+  sudo yum install httpd php -y
+  sudo yum install gcc glibc glibc-common -y
+  sudo yum install gd gd-devel -y
   ```
 
 ---
